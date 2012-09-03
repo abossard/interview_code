@@ -1,0 +1,1 @@
+{"ts":1346701114722,"silentsave":true,"restoring":false,"patch":[[{"diffs":[[1,"from linked_list import LinkedList\nfrom pprint import pprint\n\nlist = LinkedList()\nlist.append(3)\nlist.append('b')\nlist.append('v')\nlist.append(list)\nlist.append(0)\nprint(list.__unicode__())"]],"start1":0,"start2":0,"length1":0,"length2":189}]],"length":189}
