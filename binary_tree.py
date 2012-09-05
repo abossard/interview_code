@@ -60,7 +60,7 @@ class BinaryTree(object):
             return None
         parent = node.parent
         promoted_node = None
-        if data < parent.data:
+        if parent and data < parent.data:
             if node.right:
                 promoted_node = node.right
             if node.left:
@@ -76,7 +76,11 @@ class BinaryTree(object):
                     promoted_node.right = node.right
                 else:
                     promoted_node = node.right
-        promoted_node.parent = parent
+        if parent:
+            promoted_node.parent = parent
+        else:
+            self.root = promoted_node
+        return node, promoted_node
     
     def __str__(self):
         return "BinaryTree: %s"%(self.root,) 
@@ -87,4 +91,11 @@ numbers = [x for x in range(1,99)]
 random.shuffle(numbers)
 for x in numbers:
     tree.insert(x)
-print tree.find(7)
+#print tree.find(7)
+tree = BinaryTree()
+tree.insert(0)
+tree.insert(1)
+tree.insert(2)
+tree.insert(3)
+oldnode, newnode = tree.remove(0)
+print "%s - %s"% (oldnode,newnode,)
