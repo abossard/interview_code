@@ -1,1 +1,0 @@
-{"ts":1346953975449,"silentsave":true,"restoring":false,"patch":[[{"diffs":[[1,"x = range(100)\ny = reversed(range(100))\nd = [dict((('x',xx), ('y', yy))) for (xx, yy) in zip(x,y)]\n\nprint d\n"]],"start1":0,"start2":0,"length1":0,"length2":108}]],"length":108}
