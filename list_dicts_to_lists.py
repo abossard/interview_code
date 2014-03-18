@@ -6,4 +6,5 @@ def hard_math(number):
 
 pool = Pool(10)
 
-print pool.map(hard_math, range(1,101))
+freeze_support()
+print pool.map(hard_math, range(1,2))
