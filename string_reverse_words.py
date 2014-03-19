@@ -7,3 +7,7 @@ reverse = " ".join(parts)
 
 reverse_2 = " ".join(input.split()[::-1])
 print reverse_2
+
+#in C
+# REVERSE the String
+# REVERSE the words back!
